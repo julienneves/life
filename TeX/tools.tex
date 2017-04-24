@@ -1,0 +1,84 @@
+\documentclass[]{article}
+\usepackage{graphicx,float,amssymb, amsmath,titlesec,subcaption,natbib, adjustbox}
+%opening
+\title{Economic Growth, Unemployment and Mortality: Computational Tools}
+\author{Julien Neves\thanks{Julien Neves: McGill University, 26046227, neves.julien@gmail.com.}}
+
+\begin{document}
+
+\maketitle
+
+\section{Linear Equations}
+\subsection{Singular Value Decomposition}
+
+The basic model for this paper is the Lee-Carter model. It is based on modeling the logarithm of the force of mortality ($\mu_{xt}$), at age $x$ during year $t$, as a linear function of an age effect constant ($\alpha_x$) and the interaction of a time ($\kappa_t$) and age-time ($\beta_x$) parameter:
+\begin{align}\label{eq:lee-carter}
+\ln(\mu_{xt})=\alpha_x+\beta_x\kappa_t+\epsilon_{xt}.
+\end{align} 
+where $\epsilon_{xt} \sim I.I.D.(0,\sigma_\epsilon^2)$. Usually, constraints are imposed on the parameters $\kappa_t$ and $\beta_x$ in order to identify them.
+
+The most common way to estimate $\alpha_x$, $\beta_x$, and $\kappa_t$ is to use Singular Value Decomposition (SVD).
+
+The basis of SVD is to take an $X$ by $T$ matrix $M$ and decompose it in the following way
+\begin{align}
+	M = UDV^T
+\end{align}
+where $U$ and $V$ are unitary matrix and $D$ is a diagonal matrix of the singular values of $M$. Note that the more general form of the SVD decomposition takes the conjugate transpose instead of the transpose of $V$.
+
+The algorithm to find $U$, $D$, and $V$ is based on a two-step procedure where, first the matrix $M$ is reduced to a bidiagonal form using for example Householder reflections, and second the SVD is computed on the bidiagonal reduced form by using a variant of the algorithm used for QR-decomposition.
+
+In the case of the Lee-Carter model, we can take $M$ as $\ln(\mu_{xt})- \frac{1}{T}\ln(\mu_{xt})$. Then, decomposing the $M$ with SVD yields the following
+\begin{align}
+M = UDV^T = D_1U_{x1}V_{t1}^T + ... + D_XU_{xX}V_{tX}^T
+\end{align}
+where $D_1$ is the max entry of $D$. Using this we can approximate $M$ by setting $\hat{\beta}_x= U_{x1}$ and $\hat{\kappa}_t = D_1V_{t1}^T$. Finally, let $\hat{\alpha}_x = \ln(\mu_{xt}) - \hat{\beta}_x\hat{\kappa}_t$. Note that in the paper, we did not used this technique to solve the Lee-Carter model, but it is mentioned
+
+
+\section{Finite-Dimensional Optimization}
+\subsection{Newton-Raphson Method}
+
+In order to solve some log-likelihood functions described in the paper, the Newton-Raphson method was used. The method is simply an particular instance of the Netwon's method for root-finding applied to optimization problems of the following form
+\begin{align}
+	\max_x F(x)
+\end{align}
+where $F(x)$ is a twice differentiable function. If $x^*$ is the solution of this optimization problem, we have $F'(x^*)=0$.
+
+To find an iteration method to find $x^*$, we can compute the Taylor expansion of $F(x)$ around some $x^{(k)}$
+\begin{align}\label{taylor}
+F(x) \approx F(x^{(k)}) + F'(x^{(k)}) (x-x^{(k)}) + \frac{1}{2} (x-x^{(k)})^T F''(x^{(k)}) (x-x^{(k)})
+\end{align}
+
+If we plug in the first-order condition in (\ref{taylor}), the Taylor expansion reduces to
+\begin{align}
+F'(x^{(k)})+F''(x^{(k)}) (x-x^{(k)}) = 0 
+\end{align}
+
+Then, we get the following updating rule for $x^{(k)}$
+$$x^{(k+1)} \leftarrow x^{(k)} - [F''(x^{(k)})]^{-1}F'(x^{(k)}$$
+which is known as the Netwon-Raphson method.
+
+The method is usually well-behaved on globally concave(convex) functions, but if a function has multiple local maxima(minima) it might run into some problems if $x^{(0)}$ is too far from the global maxima(minima).
+
+In this paper for example, we estimate the following log-likelihood function:
+\begin{align}
+L(\alpha,\beta,\kappa)=\sum_{x,t}\{D_{xt}(\alpha_x+\beta_x\kappa_t)-E_{xt}exp(\alpha_x+\beta_x\kappa_t)\}+const.
+\end{align}
+where $D_{xt}$ be the observed number of deaths, $D_{xt}$ is the exposure-to-risk and $\alpha_x$, $\beta_x$ and $\kappa_t$ are the define as in the Lee-Carter model.
+
+To maximizes this log-likelihood function, we use the Newton-Raphson approach in the following way
+\begin{align}
+\hat{\theta}^{(v+1)}=\hat{\theta}^{(v)}  - \frac{\frac{\partial L^{(v)}}{\partial \theta}}
+{\frac{\partial^2 L^{(v)}}{\partial \theta}}
+\end{align}
+where $L^{(v)} = L^{(v)}(\hat{\theta}^{(v)})$
+
+This give the following iterative procedure for $\alpha_x$, $\beta_x$ and $\kappa_t$
+\begin{align}
+&\hat{\alpha}_x^{(v+1)}=\hat{\alpha}_x^{(v)}-\frac{\sum_t (D_{xt}-\hat{D}_{xt}^{(v)})}{-\sum_t\hat{D}_{xt}^{(v)}},\;\hat{\beta}_x^{(v+1)}=\hat{\beta}_x^{(v)},\;\hat{\kappa}_t^{(v+1)}=\hat{\kappa}_t^{(v)},\\
+&\tilde{\kappa}_t^{(v+2)}=\hat{\kappa}_t^{(v+1)}-\frac{\sum_x(D_{xt}-\hat{D}_{xt}^{(v+1)})\hat{\beta}_x^{(v+1)}}{-\sum_x\hat{D}_{xt}^{(v+1)}(\hat{\beta}_x^{(v+1)})^2},\;\hat{\alpha}_x^{(v+2)}=\hat{\alpha}_x^{(v+1)},\;\hat{\beta}_x^{(v+2)}=\hat{\beta}_x^{(v+1)},\\ \label{centering}
+&\hat{\kappa}_t^{(v+2)}=\tilde{\kappa}_t^{(v+2)}-(\frac{1}{T}\sum_{s=1}^{T}\tilde{\kappa}_s^{(v+2)}),\\
+&\hat{\beta}_x^{(v+3)}=\hat{\beta}_x^{(v+2)}-\frac{\sum_t (D_{xt}-\hat{D}_{xt}^{(v+2)})\hat{\kappa}_t^{(v+2)}}{-\sum_t\hat{D}_{xt}^{(v+2)}(\hat{\kappa}_t^{(v+2)})^2},\;\hat{\alpha}_x^{(v+3)}=\hat{\alpha}_x^{(v+2)},\;\hat{\kappa}_t^{(v+3)}=\hat{\kappa}_t^{(v+2)},
+\end{align}
+where $\hat{D}_{xt}=E_{xt}exp(\hat{\alpha}_x+\hat{\beta}_x\hat{\kappa}_t)$. Note that (\ref{centering}) is an added step to insure identification, and it does not come from the Netwon-Raphson method.
+
+\end{document}

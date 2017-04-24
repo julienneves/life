@@ -1,0 +1,131 @@
+
+
+% Bibstyle aea.bst version 2009.05.20
+
+\begin{thebibliography}{xx}
+
+\harvarditem[Alho]{J~M Alho}{2000}{Alho2000}
+{\bf Alho, J~M.} 2000. ``{The Lee-Carter Method for Forecasting Mortality, with
+  Various Extensions and Applications}.'' {\em North American Actuarial
+  Journal}, 4(1):~91--93.
+
+\harvarditem[Birchenall]{Javier~A. Birchenall}{2007}{Birchenall2007}
+{\bf Birchenall, Javier~A.} 2007. ``{Economic Development and the Escape from
+  High Mortality}.'' {\em World Development}, 35(4):~543--568.
+
+\harvarditem[Booth \harvardand\ Tickle]{H Booth \harvardand\ L
+  Tickle}{2008}{Booth2008}
+{\bf Booth, H, and L Tickle.} 2008. ``{Mortality Modelling and Forecasting: a
+  Review of Methods}.'' {\em Annals of actuarial science}, 3(1-2):~3--43.
+
+\harvarditem[Brenner]{M~H. Brenner}{2005}{Brenner2005}
+{\bf Brenner, M~H.} 2005. ``{Commentary: Economic growth is the basis of
+  mortality rate decline in the 20th century--experience of the United States
+  1901-2000}.'' {\em International Journal of Epidemiology}, 34(6):~1214--1221.
+
+\harvarditem[Brillinger]{D~R Brillinger}{1986}{Brillinger1986}
+{\bf Brillinger, D~R.} 1986. ``{The natural variability of vital rates and
+  associated statistics}.'' {\em Biometrics}, 42:~693--734.
+
+\harvarditem[Brouhns, Denuit \harvardand\ Vermunt]{N Brouhns, M Denuit
+  \harvardand\ J~K Vermunt}{2002}{Brouhns2002}
+{\bf Brouhns, N, M Denuit, and J~K Vermunt.} 2002. ``{A Poisson log-bilinear
+  regression approach to the construction of projected lifetables}.'' {\em
+  Insurance: Mathematics and Economics}, 31(3):~373--393.
+
+\harvarditem[Costa \harvardand\ Segnan]{G Costa \harvardand\ N
+  Segnan}{1987}{Costa1987}
+{\bf Costa, G, and N Segnan.} 1987. ``{Unemployment and mortality.}'' {\em
+  British medical journal (Clinical research ed.)}, 294(6586):~1550--1.
+
+\harvarditem[Ettner]{Susan~L. Ettner}{1996}{Ettner1996}
+{\bf Ettner, Susan~L.} 1996. ``{New evidence on the relationship between income
+  and health}.'' {\em Journal of Health Economics}, 15(1):~67--85.
+
+\harvarditem[Goodman]{L~A Goodman}{1979}{Goodman1979}
+{\bf Goodman, L~A.} 1979. ``{Simple models for the analysis of association in
+  cross-classifications having ordered categories}.'' {\em Journal of the
+  American Statistical Association}, 74(367):~537--552.
+
+\harvarditem[Hanewald]{Katja Hanewald}{2010}{Hanewald2009}
+{\bf Hanewald, Katja.} 2010. ``{Mortality Modeling: Lee-Carter, the
+  Macroeconomy, and Cause-Specific Mortality}.'' {\em Mortality}, 1--55.
+
+\harvarditem[Lee \harvardand\ Carter]{R~D Lee \harvardand\ L~R
+  Carter}{1992}{Lee1992}
+{\bf Lee, R~D, and L~R Carter.} 1992. ``{Modeling and forecasting US
+  mortality}.'' {\em Journal of the American statistical association},
+  87(419):~659--671.
+
+\harvarditem[Lee \harvardand\ Miller]{R~D Lee \harvardand\ T
+  Miller}{2001}{Lee2001}
+{\bf Lee, R~D, and T Miller.} 2001. ``{Evaluating the performance of the
+  lee-carter method for forecasting mortality}.'' {\em Demography},
+  38(4):~537--549.
+
+\harvarditem[Lundin et~al.]{A Lundin, I Lundberg, L Hallsten, J Ottosson
+  \harvardand\ T Hemmingsson}{2010}{Lundin2010}
+{\bf Lundin, A, I Lundberg, L Hallsten, J Ottosson, and T Hemmingsson.} 2010.
+  ``{Unemployment and mortality--a longitudinal prospective study on selection
+  and causation in 49321 Swedish middle-aged men}.'' {\em Journal of
+  Epidemiology {\&} Community Health}, 64(01):~22--28.
+
+\harvarditem[Macdonald]{A~S Macdonald}{1996}{Macdonald1996}
+{\bf Macdonald, A~S.} 1996. ``{An Actuarial Survey of Statistical Models for
+  Decrement and Transition Data-I: Multiple State, Poisson and Binomial
+  Models}.'' {\em British Actuarial Journal}, 2(01):~129--155.
+
+\harvarditem[Nandi et~al.]{A. Nandi, M.~R. Prescott, M. Cerda, D. Vlahov, K.~J.
+  Tardiff \harvardand\ S. Galea}{2012}{Nandi2012}
+{\bf Nandi, A., M.~R. Prescott, M. Cerda, D. Vlahov, K.~J. Tardiff, and S.
+  Galea.} 2012. ``{Economic Conditions and Suicide Rates in New York City}.''
+  {\em American Journal of Epidemiology}, 175(6):~527--535.
+
+\harvarditem[Nielsen \harvardand\ Nielsen]{Bent Nielsen \harvardand\ Jens~Perch
+  Nielsen}{2010}{Nielsen2010}
+{\bf Nielsen, Bent, and Jens~Perch Nielsen.} 2010. ``{Identification and
+  Forecasting in the Lee-Carter Model}.'' {\em SSRN Electronic Journal}, 1--14.
+
+\harvarditem[Niu \harvardand\ Melenberg]{Geng Niu \harvardand\ Bertrand
+  Melenberg}{2014}{Niu2014}
+{\bf Niu, Geng, and Bertrand Melenberg.} 2014. ``{Trends in Mortality Decrease
+  and Economic Growth}.'' {\em Demography}, 51(5):~1755--1773.
+
+\harvarditem[Nyl{\'{e}}n, Voss \harvardand\ Floderus]{L Nyl{\'{e}}n, M Voss
+  \harvardand\ B Floderus}{2001}{Nylen2001}
+{\bf Nyl{\'{e}}n, L, M Voss, and B Floderus.} 2001. ``{Mortality among women
+  and men relative to unemployment, part time work, overtime work, and extra
+  work: a study based on data from the Swedish twin registry.}'' {\em
+  Occupational and environmental medicine}, 58(1):~52--7.
+
+\harvarditem[Pitacco et~al.]{Ermanno. Pitacco, Michel Denuit, Steven Haberman,
+  Annamaria Olivieri, Ermanno Pitacco, Michel Denuit, Steven Haberman
+  \harvardand\ Annamaria Olivieri}{2009}{Pitacco2009}
+{\bf Pitacco, Ermanno., Michel Denuit, Steven Haberman, Annamaria Olivieri,
+  Ermanno Pitacco, Michel Denuit, Steven Haberman, and Annamaria Olivieri.}
+  2009. {\em {Modelling longevity dynamics for pensions and annuity business}.}
+  Oxford University Press.
+
+\harvarditem[Pritchett \harvardand\ Summers]{Lant Pritchett \harvardand\
+  Lawrence~H. Summers}{1996}{Pritchett1996}
+{\bf Pritchett, Lant, and Lawrence~H. Summers.} 1996. ``{Wealthier is
+  Healthier}.'' {\em The Journal of Human Resources}, 31(4):~841.
+
+\harvarditem[Sithole, Haberman \harvardand\ Verrall]{Terry~Z Sithole, Steven
+  Haberman \harvardand\ Richard~J Verrall}{2000}{Sithole2000}
+{\bf Sithole, Terry~Z, Steven Haberman, and Richard~J Verrall.} 2000. ``{An
+  investigation into parametric models for mortality projections, with
+  applications to immediate annuitants' and life office pensioners' data}.''
+  {\em Insurance: Mathematics and Economics}, 27(3):~285--312.
+
+\harvarditem[Swift]{Robyn Swift}{2011}{Swift2011}
+{\bf Swift, Robyn.} 2011. ``{The relationship between health and GDP in OECD
+  countries in the very long run}.'' {\em Health Economics}, 20(3):~306--322.
+
+\harvarditem[Wilmoth]{John~R Wilmoth}{1993}{Wilmoth1993}
+{\bf Wilmoth, John~R.} 1993. ``{Computational methods for fitting and
+  extrapolating the {\{}L{\}}ee-{\{}C{\}}arter model of mortality change}.''
+  Department of Demography, University of California, Berkeley Technical
+  report.
+
+\end{thebibliography}
