@@ -3,6 +3,7 @@ library(readxl)
 library(vars)
 library(tilting)
 
+# Credentials for HMD
 username <- "neves.julien@gmail.com"
 password <- "plokijuh"
 
